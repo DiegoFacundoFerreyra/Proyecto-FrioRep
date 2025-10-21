@@ -4,16 +4,61 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .fiveicon {
-  height: 192px;
-  width: 192px;
+  height: 64px;
+  width: 64px;
 }
 
 .whatsapp {
-  width: 80px;
-  height: 80px;
+  width: 68px;
+  height: 68px;
   outline: none;
   position: fixed;
   bottom: 4px;
   right: 4px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 240px;
+  height: 100px;
+}
+
+.fabra {
+  width: 240px;
+  height: 100px;
+}
+
+.busqueda {
+  width: 220px;
+  height: 40px;
+  font-size: 28px;
+  margin-top: 30px;
+  border: 2px solid steelblue;
+  border-radius: 8px;
+  outline: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(217, 246, 252, 0.767);
+  height: 100px;
+}
+
+footer {
+  color: antiquewhite;
+  display: flex;
+  background-color: rgb(7, 140, 173);
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-top: auto;
 }
