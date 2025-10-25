@@ -5,6 +5,26 @@
 }
 
 .fiveicon {
-  height: 32px;
-  width: 32px;
+  height: 64px;
+  width: 48px;
+}
+
+.carrito-container {
+  position: relative; /* contenedor base para posicionar el contador */
+  display: inline-block;
+}
+
+#contador-carrito {
+  position: absolute;
+  top: 4px; /* ajustá según tu icono */
+  right: 4px; /* ajustá según tu icono */
+  background-color: steelblue;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
 }

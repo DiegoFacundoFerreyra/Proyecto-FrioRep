@@ -11,11 +11,6 @@ body {
   height: 100vh;
 }
 
-.fiveicon {
-  height: 64px;
-  width: 64px;
-}
-
 .whatsapp {
   width: 68px;
   height: 68px;
@@ -36,14 +31,30 @@ body {
   height: 100px;
 }
 
-.busqueda {
-  width: 280px;
-  height: 40px;
-  font-size: 28px;
+.buscador {
   margin-top: 30px;
-  border: 2px solid steelblue;
-  border-radius: 8px;
+  height: 40px;
+  width: 400px; /* ajustá según tu diseño */
+}
+
+/* Input con espacio para la lupa */
+.busqueda {
+  width: 100%;
+  padding: 10px 40px 10px 12px; /* espacio a la derecha para la lupa */
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
   outline: none;
+  transition: box-shadow 0.4s ease;
+  background: url("../img/lupa.png") no-repeat right 20px center;
+  background-size: 32px;
+  background-color: white;
+}
+
+/* Efecto al enfocar */
+.busqueda:focus {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  border-color: #888;
 }
 
 .logo-usuario {
