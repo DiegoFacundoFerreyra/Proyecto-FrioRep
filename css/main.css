@@ -4,13 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .whatsapp {
   width: 68px;
   height: 68px;
@@ -74,14 +67,4 @@ header {
   justify-content: space-around;
   background-color: rgba(217, 246, 252, 0.767);
   height: 100px;
-}
-
-footer {
-  color: antiquewhite;
-  display: flex;
-  background-color: rgb(7, 140, 173);
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  margin-top: auto;
 }
