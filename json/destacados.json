@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "nombre": "Piso techo de 15000 frigorías INVERTER",
+    "precio": 120000
+  },
+
+  {
+    "id": 2,
+    "nombre": "Piso techo de 15000 frigorías ON/OFF",
+    "precio": 120000
+  },
+
+  {
+    "id": 3,
+    "nombre": "Piso techo de 18000 frigorías INVERTER",
+    "precio": 120000
+  },
+
+  {
+    "id": 4,
+    "nombre": "Piso techo de 18000 frigorías ON/OFF",
+    "precio": 120000
+  },
+
+  {
+    "id": 5,
+    "nombre": "Split de 2600 watts INVERTER",
+    "precio": 120000
+  },
+
+  {
+    "id": 6,
+    "nombre": "Split de 3500 watts INVERTER",
+    "precio": 120000
+  },
+
+  {
+    "id": 7,
+    "nombre": "Split de 5300 watts INVERTER",
+    "precio": 120000
+  },
+
+  {
+    "id": 8,
+    "nombre": "Split de 6900 watts INVERTER",
+    "precio": 120000
+  },
+  {
+    "id": 9,
+    "nombre": "Split de 2600 watts ON/OFF",
+    "precio": 120000
+  },
+  {
+    "id": 10,
+    "nombre": "Split de 3200 watts ON/OFF",
+    "precio": 120000
+  },
+
+  {
+    "id": 11,
+    "nombre": "Split de 5200 watts ON/OFF",
+    "precio": 120000
+  },
+
+  {
+    "id": 12,
+    "nombre": "Split de 6500 watts ON/OFF",
+    "precio": 120000
+  },
+
+  {
+    "id": 13,
+    "nombre": "Split black ice de 3500 watts INVERTER con wifi",
+    "precio": 120000
+  },
+
+  {
+    "id": 14,
+    "nombre": "Split black ice de 5300 watts INVERTER con wifi",
+    "precio": 120000
+  }
+]
