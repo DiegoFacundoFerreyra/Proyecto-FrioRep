@@ -27,11 +27,45 @@ const imagenes = [
   "whirlpool.png",
   "xingfa.png",
   "electra.png",
+  "elitech.png",
 ];
 
 const track = document.createElement("div");
 track.classList.add("marcas-track");
-const listaCompleta = [...imagenes, ...imagenes]; // Duplicar las imágenes para el efecto infinito
+const listaCompleta = [
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+  ...imagenes,
+]; // Duplicar las imágenes para el efecto infinito
 listaCompleta.forEach((img) => {
   const imagen = document.createElement("img");
   imagen.src = `../img/marcas/${img}`;
@@ -80,16 +114,75 @@ function crearDestacados(productosDestacados) {
 }
 
 //CARGAR DESDE EL ARCHIVO JSON
-fetch("../json/destacados.json")
+fetch("./json/destacados.json")
   .then((response) => {
-    if (!response.ok) {
-      throw new Error("Error al cargar el archivo JSON");
-    }
+    if (!response.ok) throw new Error("Error al cargar el archivo JSON");
     return response.json();
   })
   .then((data) => {
-    crearDestacados(data); //generamos los productos destacados
+    crearDestacados(data);
   })
-  .catch((error) => {
-    console.error("Error:", error);
+  .catch((error) => console.error("Error:", error));
+
+// BUSCADOR DE PRODUCTOS
+document.addEventListener("DOMContentLoaded", () => {
+  const inputBusqueda = document.getElementById("busqueda");
+  const btnBusqueda = document.getElementById("btn-busqueda");
+
+  function filtrarProductos() {
+    const texto = inputBusqueda.value.toLowerCase().trim();
+    const productos = document.querySelectorAll(".tarjeta-destacado");
+
+    productos.forEach((producto) => {
+      const nombre = producto.querySelector("h3").textContent.toLowerCase();
+      producto.style.display = nombre.includes(texto) ? "block" : "none";
+    });
+  }
+
+  // BUSCADOR DE PRODUCTOS MEJORADO
+  /*function filtrarProductos() {
+  const texto = inputBusqueda.value.toLowerCase().trim();
+
+  const productos = document.querySelectorAll(".tarjeta-destacado");
+  productos.forEach((producto) => {
+    const nombre = producto.querySelector("h3").textContent.toLowerCase();
+
+    // También buscamos dentro de dataset, si guardás las categorías o tags ahí
+    const categoria = producto.dataset.categoria || "";
+    const tags = producto.dataset.tags || "";
+
+    // Mostrar si el texto coincide con alguno de los campos
+    const coincide =
+      nombre.includes(texto) ||
+      categoria.toLowerCase().includes(texto) ||
+      tags.toLowerCase().includes(texto);
+
+    producto.style.display = coincide ? "block" : "none";
   });
+}*/
+
+  //ESTO ES PARA AGREGAR EN BUSQUEDAS EN EL JSON. TANTO EL TAG COMO EL CATEGORIAS Y CONFIGURARLO EN EL JS PARA QUE TE LO ENCUENTRE
+
+  /*[
+  {
+    "id": 1,
+    "nombre": "Piso techo de 15000 frigorías INVERTER",
+    "precio": 120000,
+    "categoria": "aire acondicionado",
+    "tags": ["piso techo", "inverter", "frio", "calor", "aire"]
+  },
+  {
+    "id": 2,
+    "nombre": "Motocompresor 1/4 hp Electrolux",
+    "precio": 80000,
+    "categoria": "compresores",
+    "tags": ["motocompresor", "heladera", "refrigeración", "compresor"]
+  }
+]*/
+
+  btnBusqueda.addEventListener("click", filtrarProductos);
+  inputBusqueda.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") filtrarProductos();
+  });
+  inputBusqueda.addEventListener("input", filtrarProductos);
+});
